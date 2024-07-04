@@ -1,0 +1,224 @@
+/* CustomCalendar.css - Example styles to match Zendesk Garden theme */
+
+/* Calendar base styles */
+.rbc-calendar {
+    font-family: 'system-ui', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #2f3941; /* Example text color */
+  }
+  
+  /* Header */
+  .rbc-toolbar {
+    background-color: #f8f9f9; /* Example background color */
+    color: #2f3941; /* Example text color */
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  .rbc-toolbar button {
+    background-color: #30aabc; /* Example button color */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 2px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .rbc-toolbar button:disabled {
+    background-color: #e9ecef;
+    color: #495057;
+  }
+  
+  /* Month view, day and event styles */
+  .rbc-month-view, .rbc-day-bg, .rbc-time-view, .rbc-time-header {
+    background-color: #ffffff; /* Example background color */
+    border: 1px solid #e9ecef; /* Example border color */
+  }
+  
+  .rbc-event {
+    background-color: #30aabc; /* Example event background color */
+    color: white;
+    border-radius: 4px;
+    padding: 4px 8px;
+    border: none;
+  }
+  
+  .rbc-today {
+    background-color: #e9ecef; /* Example today background color */
+  }
+
+  /* Agenda view styles */
+.rbc-agenda-view table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .rbc-agenda-date-cell, .rbc-agenda-time-cell, .rbc-agenda-event-cell {
+    padding: 8px;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  /* Week and day views */
+  .rbc-time-header {
+    background-color: #f8f9f9;
+    color: #2f3941;
+  }
+  
+  .rbc-time-content {
+    background-color: #fff;
+    border-left: 1px solid #e9ecef;
+  }
+  
+  .rbc-time-gutter, .rbc-allday-cell {
+    background-color: #f8f9f9;
+  }
+  
+  .rbc-timeslot-group {
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .rbc-allday-cell {
+    border-top: 1px solid #e9ecef;
+    border-bottom: none;
+  }
+  
+  /* Event details */
+  .rbc-event-content {
+    font-size: 0.875rem;
+  }
+  
+  /* Navigation buttons */
+  .rbc-btn-group button {
+    background-color: #30aabc;
+    color: #fff;
+    border: none;
+    padding: 6px 12px;
+    margin: 0 2px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .rbc-btn-group button:hover {
+    background-color: #238b8d;
+  }
+  
+  /* Today button */
+  .rbc-toolbar .rbc-btn-today {
+    background-color: #76c7c0;
+    color: #fff;
+  }
+  
+  /* Active view buttons */
+  .rbc-toolbar .rbc-active {
+    background-color: #238b8d;
+    color: #fff;
+  }
+  
+  /* Adjust the selected event style */
+  .rbc-event-selected {
+    background-color: #238b8d;
+  }
+  
+  /* Customize the appearance of the popup */
+  .rbc-overlay {
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  }
+  
+  .rbc-overlay-header {
+    background-color: #30aabc;
+    color: #fff;
+    padding: 8px;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .rbc-overlay .rbc-overlay-content {
+    padding: 10px;
+    background-color: #fff;
+    color: #2f3941;
+  }
+  
+  /* Style for the month view events */
+  .rbc-month-view .rbc-event, .rbc-month-view .rbc-row-segment .rbc-event {
+    margin: 1px;
+    padding: 4px 8px;
+    background-color: #30aabc;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+  }
+  
+  /* Hover effect for events */
+  .rbc-event:hover {
+    background-color: #238b8d;
+  }
+  
+  /* Style adjustments for the toolbar */
+  .rbc-toolbar-label {
+    font-size: 1.2rem;
+    color: #2f3941;
+  }
+  
+  .rbc-toolbar button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(48,171,188,0.5);
+  }
+  
+  /* Adjustments for small screens */
+  @media (max-width: 768px) {
+    /* Hide month and week view buttons on small screens */
+    .rbc-toolbar button[data-rbc-action="month"], 
+    .rbc-toolbar button[data-rbc-action="week"] {
+        display: none;
+    }
+    /* Reduce padding and font size in buttons for more space */
+    .rbc-toolbar button {
+        padding: 2px 4px;
+        font-size: 0.75rem;
+    }
+
+    /* Adjust the toolbar label for better visibility */
+    .rbc-toolbar-label {
+        font-size: 0.9rem;
+        margin: 0 10px; /* Add some margin for breathing space */
+    }
+
+    /* Increase the touch area of events */
+    .rbc-month-view .rbc-event, .rbc-month-view .rbc-row-segment .rbc-event {
+        padding: 6px 8px; /* Larger padding for easier tapping */
+        font-size: 0.75rem; /* Adjust font size for space and readability */
+    }
+
+    /* Adjust event title to not overflow */
+    .rbc-event-content {
+        white-space: normal; /* Allow wrapping */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: 3em; /* Limit height to prevent overly large events */
+        line-height: 1em;
+    }
+
+    /* Adjust day and event cells for a more compact view */
+    .rbc-month-view .rbc-day-bg, .rbc-month-view .rbc-row-segment, .rbc-time-view, .rbc-time-header {
+        padding: 2px; /* Reduce padding for more space */
+    }
+
+    /* Make the today button more prominent */
+    .rbc-toolbar .rbc-btn-today {
+        background-color: #76c7c0; /* Zendesk Garden "success" color for emphasis */
+        color: #fff;
+        font-weight: bold; /* Make it stand out */
+    }
+  }
+
+  /* Ensure all view buttons are visible on tablet and larger screens */
+  @media (min-width: 768px) {
+    .rbc-toolbar button[data-rbc-action="month"], 
+    .rbc-toolbar button[data-rbc-action="week"],
+    .rbc-toolbar button[data-rbc-action="day"],
+    .rbc-toolbar button[data-rbc-action="agenda"] {
+      display: inline-block;
+    }
+  }
+  
+  /* Adjust more styles as needed */
