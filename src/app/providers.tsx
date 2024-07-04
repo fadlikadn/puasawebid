@@ -1,6 +1,6 @@
 'use client'
 
-import { ThemeProvider } from "@zendeskgarden/react-theming"
+import { DEFAULT_THEME, ThemeProvider } from "@zendeskgarden/react-theming"
 import { FC, ReactNode } from "react"
 
 interface ProvidersProps {
@@ -9,7 +9,7 @@ interface ProvidersProps {
 
 const Providers: FC<ProvidersProps> = ({ children }) => {
     return (
-        <ThemeProvider>
+        <ThemeProvider theme={DEFAULT_THEME}>
             {children}
         </ThemeProvider>
     )
