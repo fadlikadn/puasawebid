@@ -27,6 +27,13 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
+.puasa-senin-kamis {
+  background-color: #17494d !important;
+  color: #f5fcfc;
+  padding: 8px;
+  /* border-radius: 4px; */
+}
+
 @layer utilities {
   /* .text-balance {
     text-wrap: balance;

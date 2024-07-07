@@ -1,11 +1,13 @@
 import BasicCalendar from "@/components/BasicCalendar"
 import Providers from "./providers"
+import FullCalendar from "@/components/FullCalendar"
 
 const Home = () => {
     return (
         <Providers>
             <div className="m-3">
-                <BasicCalendar />
+                {/* <BasicCalendar /> */}
+                <FullCalendar />
             </div>
         </Providers>
     )

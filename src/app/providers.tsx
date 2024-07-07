@@ -9,9 +9,11 @@ interface ProvidersProps {
 
 const Providers: FC<ProvidersProps> = ({ children }) => {
     return (
-        <ThemeProvider theme={DEFAULT_THEME}>
-            {children}
-        </ThemeProvider>
+        // <ThemeProvider theme={DEFAULT_THEME}>
+            <>
+                {children}
+            </>
+        // </ThemeProvider>
     )
 }
 
