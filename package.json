@@ -13,6 +13,7 @@
     "@zendeskgarden/react-theming": "^8.76.3",
     "@zendeskgarden/tailwindcss": "^4.0.0-next.0",
     "date-fns": "^3.6.0",
+    "hijri-date": "^0.2.2",
     "next": "14.2.4",
     "react": "^18",
     "react-big-calendar": "^1.13.0",

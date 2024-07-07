@@ -1,3 +1,13 @@
+.react-calendar__month-view {
+    border: 1px solid #a0a096;
+}
+
+.react-calendar__month-view button {
+    margin: 0;
+    border: 0;
+    outline: none;
+  }
+
 .react-calendar {
     /* width: 350px; */
     width: 100%;

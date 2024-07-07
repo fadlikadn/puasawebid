@@ -1628,6 +1628,11 @@ hasown@^2.0.0, hasown@^2.0.1, hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
+hijri-date@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/hijri-date/-/hijri-date-0.2.2.tgz#16bc0693b0f50840d0f155fcb4e84ab8e5266338"
+  integrity sha512-LiuslQTPqePwh/KguBB2KH/hzISQd7nQtfVPwdCKgfFv0GDzwjIeTQX/LkBKLI8rPeuXasr3sQMuJL35g8HEAw==
+
 ignore@^5.2.0:
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.1.tgz#5073e554cd42c5b33b394375f538b8593e34d4ef"
