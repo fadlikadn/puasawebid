@@ -34,6 +34,35 @@ body {
   /* border-radius: 4px; */
 }
 
+.puasa-ramadhan {
+  background-color: #1f73b7 !important;
+  color: #f5fcfc;
+  padding: 8px;
+}
+
+.puasa-ayaamul-bidh {
+  background-color: #6a27b8 !important;
+  color: #f5fcfc;
+  padding: 8px;
+}
+
+.puasa-syawal {
+  background-color: #ffeedb !important;
+  /* color: #f5fcfc; */
+  padding: 8px;
+}
+
+.puasa-arafah {
+  background-color: #d653c2 !important;
+  padding: 8px;
+}
+
+.dilarang-puasa-tasyrik {
+  background-color: #e35b66 !important;
+  color: #f5fcfc;
+  padding: 8px;
+}
+
 @layer utilities {
   /* .text-balance {
     text-wrap: balance;
