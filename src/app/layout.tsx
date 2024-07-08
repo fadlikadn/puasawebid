@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Puasa.web.id",
-  description: "Pengingat rutinitas puasa sunnah",
+  title: "Jadwal Puasa Terlengkap - Puasa.web.id",
+  description: "Pengingat rutinitas puasa wajib dan sunnah",
 };
 
 export default function RootLayout({
