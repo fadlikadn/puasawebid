@@ -18,29 +18,46 @@ const tileClassName = ({ date, view }: { date: Date, view: string }) => {
         const adjustLocalBeforeHijriDate = addHours(zonedDate, -12)
         const hijriDate = toHijri(adjustLocalBeforeHijriDate)
 
-        if (hijriDate.getMonth() === 12 && (hijriDate.getDate() >= 11 && hijriDate.getDate() <= 13)) {
+        /**
+         * Hari Tasrik (10, 11, 12, 13 Dzulhijjah)
+         * 10 Dzulhijjah: Hari Raya Idul Adha
+         * 1 Syawal: Hari Raya Idul Fitri
+         */
+        if ((hijriDate.getMonth() === 12 && (hijriDate.getDate() >= 10 && hijriDate.getDate() <= 13)) || (hijriDate.getMonth() === 10 && hijriDate.getDate() === 1)) {
             return 'dilarang-puasa-tasyrik'
         }
 
+        /**
+         * Puasa Arafah (9 Dzulhijjah)
+         */
         if (hijriDate.getMonth() === 12 && hijriDate.getDate() === 9) {
             return 'puasa-arafah'
         }
 
-        // Puasa Ayaamul Bidh (13, 14, 15 every hijri month), except 13 Dzulhijjah (Tasyrik)
+        /**
+         * Puasa Ayaamul Bidh (13, 14, 15 every hijri month), except 13 Dzulhijjah (Tasyrik)
+         */
         if (((hijriDate.getDate() === 13 && hijriDate.getMonth() !== 12) || hijriDate.getDate() === 14 || hijriDate.getDate() === 15) && hijriDate.getMonth() !== 9) {
             return 'puasa-ayaamul-bidh'
         }
 
-        // Monday = 1, Thursday = 4
+        /**
+         * Puasa Senin & Kamis (every Monday & Thursday), except 9 Dzulhijjah (Arafah) and 13, 14, 15 Dzulhijjah (Tasyrik)
+         */
         if ((zonedDate.getDay() === 1 || zonedDate.getDay() === 4) && hijriDate.getMonth() !== 9){
             return 'puasa-senin-kamis'
         }
 
+        /**
+         * Puasa Syawal (6 days after Eid al-Fitr)
+         */
         if (hijriDate.getMonth() === 10 && hijriDate.getDate() >= 2) {
             return 'puasa-syawal'
         }
         
-        // Puasa Ramadhan
+        /**
+         * Puasa Ramadhan (9th month)
+         */
         if (hijriDate.getMonth() === 9) {
             return 'puasa-ramadhan'
         }
