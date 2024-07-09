@@ -69,7 +69,7 @@ const tileClassName = ({ date, view }: { date: Date, view: string }) => {
 const FullCalendar = () => {
     const [currentYear, _setCurrentYear] = useState(year)
     return (
-        <div className="bg-kale-100">
+        <div className="max-w-screen-lg mx-auto px-4 py-2">
             <div className='flex justify-center mb-5'>
                 <h1 className="px-2 py-1 font-semibold round">Jadwal Puasa {currentYear}</h1>
             </div>
