@@ -36,13 +36,13 @@ body {
 
 .puasa-ramadhan {
   background-color: #1f73b7 !important;
-  color: #f5fcfc;
+  color: #f5fcfc !important;
   padding: 8px;
 }
 
 .puasa-ayaamul-bidh {
   background-color: #6a27b8 !important;
-  color: #f5fcfc;
+  color: #f5fcfc !important;
   padding: 8px;
 }
 
@@ -54,12 +54,19 @@ body {
 
 .puasa-arafah {
   background-color: #d653c2 !important;
+  color: #f5fcfc !important;
+  padding: 8px;
+}
+
+.puasa-tasua-asyura {
+  background-color: #2e8200 !important;
+  color: #f5fcfc !important;
   padding: 8px;
 }
 
 .dilarang-puasa-tasyrik {
   background-color: #e35b66 !important;
-  color: #f5fcfc;
+  color: #f5fcfc !important;
   padding: 8px;
 }
 
