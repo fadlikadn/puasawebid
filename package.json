@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
     "@zendeskgarden/css-bedrock": "^9.1.1",
     "@zendeskgarden/react-buttons": "^8.76.4",
     "@zendeskgarden/react-modals": "^8.76.4",
@@ -19,14 +21,12 @@
     "hijri-date": "^0.2.2",
     "next": "14.2.4",
     "react": "^18",
-    "react-big-calendar": "^1.13.0",
     "react-calendar": "^5.0.0",
     "react-dom": "^18"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-big-calendar": "^1.8.9",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
