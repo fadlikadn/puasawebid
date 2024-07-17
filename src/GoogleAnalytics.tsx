@@ -1,18 +1,15 @@
 'use client'
 
 // GoogleAnalytics.tsx
-
 import Script from "next/script"
 
 const GoogleAnalytics = () => {
-    console.log(process.env.NEXT_PUBLIC_MEASUREMENT_ID)
     return (
         <>
             <Script
                 strategy="lazyOnload"
                 src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`}
             />
-
             <Script id="" strategy="lazyOnload">
                 {`
                     window.dataLayer = window.dataLayer || [];
@@ -21,6 +18,7 @@ const GoogleAnalytics = () => {
 
                     gtag('config', '${process.env.NEXT_PUBLIC_MEASUREMENT_ID}', {
                         page_path: window.location.pathname,
+                        cookie_flags: 'max-age=7200;samesite=none;secure',
                     });
                 `}
             </Script>
